@@ -11,6 +11,7 @@ script:
 - CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
 - cmake --build .
 - cpack
-- export PACKAGE_VERSION=`ls *.deb | awk -F'-' '{print $2}'`
-- curl -T *.deb -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/
+- export PACKAGE_FILE=`ls *.deb`
+- export PACKAGE_VERSION=`$PACKAGE_FILE | awk -F'-' '{print $2}'`
+- curl -T $PACKAGE_FILE -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/$PACKAGE_FILE
 - curl -X POST -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/publish
