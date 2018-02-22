@@ -12,4 +12,5 @@ script:
 - cmake --build .
 - cpack
 - export PACKAGE_VERSION=`ls *.deb | awk -F'-' '{print $2}'`
-- curl -T *.deb -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/helloworld
+- curl -T *.deb -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/
+- curl -X POST -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/publish
