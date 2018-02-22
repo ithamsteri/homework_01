@@ -1,14 +1,15 @@
 dist: trusty
 sudo: false
 language: cpp
-
 addons:
   apt:
     sources:
-      - llvm-toolchain-trusty-5.0
+    - llvm-toolchain-trusty-5.0
     packages:
-      - clang-5.0
-
+    - clang-5.0
 script:
-  - CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
-  - cmake --build .
+- CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
+- cmake --build .
+- cpack
+- export PACKAGE_VERSION=`ls *.deb | awk -F'-' '{print $2}'`
+- curl -T *.deb -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/helloworld
