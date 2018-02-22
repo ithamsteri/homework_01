@@ -1,5 +1,7 @@
 ## Домашнее задание 01
 
+[![Build Status](https://travis-ci.org/ithamsteri/homework_01.svg?branch=master)](https://travis-ci.org/ithamsteri/homework_01)
+
 **Цель:** сборка проекта и публикация пакета
 
 **Необходимо:**
