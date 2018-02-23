@@ -8,13 +8,13 @@
         "licenses": ["MIT"],
         "labels": ["cool", "awesome", "gorilla"],
         "public_download_numbers": false,
-        "public_stats": false,
+        "public_stats": false
     },
     
     "version": {
         "name": "1.0",
         "desc": "This is release",
-        "gpgSign": true,
+        "gpgSign": true
     },
     
     "files":
@@ -25,5 +25,6 @@
                 "deb_architecture": "amd64"
             }
         }
-        ]
+        ],
+    "publish": true
 }
