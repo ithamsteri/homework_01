@@ -2,11 +2,11 @@
     "package": {
         "name": "helloworld",
         "repo": "space",
-        "subject": "hamsterisoft",
+        "subject": "hamsterisoft"
     },
     
     "version": {
-        "name": "1.0",
+        "name": "1.0"
     },
     
     "files":
