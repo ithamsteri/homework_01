@@ -11,6 +11,7 @@ addons:
 script:
 - CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
 - cmake --build .
+- ctest -V
 - cpack
 deploy:
   provider: bintray
