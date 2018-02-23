@@ -1,0 +1,29 @@
+{
+    "package": {
+        "name": "helloworld",
+        "repo": "space",
+        "subject": "ithamsteri",
+        "desc": "I was pushed completely automatically",
+        "webdite_url": "www.jfrog.com",
+        "licenses": ["MIT"],
+        "labels": ["cool", "awesome", "gorilla"],
+        "public_download_numbers": false,
+        "public_stats": false,
+    },
+    
+    "version": {
+        "name": "1.0",
+        "desc": "This is release",
+        "gpgSign": true,
+    },
+    
+    "files":
+        [{"includePattern": "(.*\.deb)", "uploadPattern": "pool/main/m/helloworld/$1",
+            "matrixParams": {
+                "deb_distribution": "vivid",
+                "deb_component": "main",
+                "deb_architecture": "amd64"
+            }
+        }
+        ]
+}

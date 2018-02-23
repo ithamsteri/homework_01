@@ -11,7 +11,9 @@ script:
 - CXX=/usr/bin/clang++-5.0 CC=/usr/bin/clang-5.0 cmake .
 - cmake --build .
 - cpack
-- export PACKAGE_FILE=`ls *.deb`
-- export PACKAGE_VERSION=`echo $PACKAGE_FILE | awk -F'-' '{print $2}'`
-- curl -T $PACKAGE_FILE -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/pool/main/m/helloworld/$PACKAGE_FILE;deb_distribution=unstable;deb_component=main;deb_architecture=amd64
-- curl -X POST -H "X-GPG-PASSPHRASE: $PGPKEY" -uithamsteri:$BINTRAY_API_KEY https://api.bintray.com/content/hamsterisoft/otus/helloworld/$PACKAGE_VERSION/publish
+deploy:
+  provider: bintray
+  file: deploy.json
+  user: ithamsteri
+  key: $BINTRAY_API_KEY
+  passphrase: $PGPKEY
