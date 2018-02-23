@@ -1,13 +1,13 @@
 {
     "package": {
         "name": "helloworld",
-        "repo": "deb",
+        "repo": "apt-repo",
         "subject": "hamsterisoft"
     },
     
     "version": {
         "name": "1.0",
-        "desc": "This is a version",
+        "desc": "First version of application",
         "gpgSign": true
     },
     
