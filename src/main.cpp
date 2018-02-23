@@ -3,8 +3,6 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-    std::string name {"World"};
-    
     // show greeting message
-    std::cout << say_hello(name)<< std::endl;
+    std::cout << say_hello(std::move("World"))<< std::endl;
 }

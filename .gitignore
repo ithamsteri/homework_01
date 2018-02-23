@@ -1,5 +1,6 @@
 # Project specific igrnore
 Build/
+Testing/
 src/version.hpp
 
 # Prerequisites
