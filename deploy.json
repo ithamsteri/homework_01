@@ -10,7 +10,7 @@
     },
     
     "files":
-        [{"includePattern": "(.*\.deb)", "uploadPattern": "pool/main/m/helloworld/$1",
+        [{"includePattern": "./(.*\.deb)", "uploadPattern": "pool/main/m/helloworld/$1",
             "matrixParams": {
                 "deb_distribution": "vivid",
                 "deb_component": "main",
