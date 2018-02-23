@@ -2,19 +2,11 @@
     "package": {
         "name": "helloworld",
         "repo": "space",
-        "subject": "ithamsteri",
-        "desc": "I was pushed completely automatically",
-        "webdite_url": "www.jfrog.com",
-        "licenses": ["MIT"],
-        "labels": ["cool", "awesome", "gorilla"],
-        "public_download_numbers": false,
-        "public_stats": false
+        "subject": "hamsterisoft",
     },
     
     "version": {
         "name": "1.0",
-        "desc": "This is release",
-        "gpgSign": true
     },
     
     "files":
