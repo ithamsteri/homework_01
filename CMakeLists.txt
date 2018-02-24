@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 3.2)
 # TODO: better idea use git revision
 if($ENV{TRAVIS_BUILD_NUMBER})
     set(VERSION_BUILD $ENV{TRAVIS_BUILD_NUMBER})
-else($ENV{TRAVIS_BUILD_NUMBER})
+else()
     set(VERSION_BUILD 0)
-endif($ENV{TRAVIS_BUILD_NUMBER})
+endif()
 
 project(helloworld VERSION 1.0.${VERSION_BUILD})
 
