@@ -1,8 +1,11 @@
 #include "lib.hpp"
-#include <boost/test/minimal.hpp>
 
-int test_main(int, char *[]) {
+#define BOOST_TEST_MODULE SimpleTest
+#include <boost/test/unit_test.hpp>
+
+BOOST_AUTO_TEST_CASE(testSayHello)
+{
     std::string result {"Hello, World!"};
     
-    return result.compare(say_hello("World")) != 0;
+    BOOST_CHECK_EQUAL(result.compare(say_hello("World")), 0);
 }

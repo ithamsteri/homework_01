@@ -31,6 +31,13 @@ set_target_properties(helloworld_cli helloworld_lib unit_test PROPERTIES
     # INCLUDE_DIRECTORIES
 )
 
+# BOOST_TEST_DYN_LINK - Define this flag to link against
+# the Unit Test Framework shared library
+set_target_properties(unit_test PROPERTIES
+  COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+  INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+)
+
 # link executable file with libraries
 target_link_libraries(helloworld_cli
     helloworld_lib
