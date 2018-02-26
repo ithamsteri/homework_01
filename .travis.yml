@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false
+sudo: required
 language: cpp
 addons:
   apt:
@@ -13,6 +13,8 @@ script:
 - cmake --build .
 - ctest -V
 - cpack
+- sudo dpkg -i helloworld-*.deb
+- helloworld
 deploy:
   provider: bintray
   file: deploy.json
