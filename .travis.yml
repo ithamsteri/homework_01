@@ -13,8 +13,7 @@ script:
 - cmake --build .
 - ctest -V
 - cpack
-- sudo dpkg -i helloworld-*.deb
-- helloworld
+- sudo dpkg -i helloworld-*.deb && helloworld_cli
 deploy:
   provider: bintray
   file: deploy.json
